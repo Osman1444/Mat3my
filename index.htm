@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Source/Style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <section>
+            <div class="logo"></div>
+            <h1>أ\عصام</h1>
+        </section>
+        <section class="Link">
+            <a href="#about" class="about">عنا</a>
+            <a href="#menu" class="menu">قائمة الوجبات</a>
+            <a href="#gallary" class="gallary">صور للطعام</a>
+            <a href="#order" class="order">طلب الطعام </a>
+        </section>
+    </nav>
+    <main>
+        <section>
+            <p>بدأ مطعم الأستاذ عصام فى تقديم الوجبات من سنة 1520ميلاديا </p>
+            <button>طلب الطعام</button>
+        </section>
+    </main>
+    <section id="menu" class="winds">
+        <div onclick="showFood('food')"><h2>فراخ</h2></div>
+        <div onclick="showFood('food')"><h2>بطاطس</h2></div>
+        <div onclick="showFood('food')"><h2>بيتزا</h2></div>
+        <div onclick="showFood('food')"><h2>كريب</h2></div>
+        <div onclick="showFood('food')"><h2>شاورما</h2></div>
+        <div onclick="showFood('food')"><h2>عدس</h2></div>
+        <div onclick="showFood('food')"><h2>لحمة</h2></div>
+        <div onclick="showFood('food')"><h2>شوربة خضار</h2></div>
+        <div onclick="showFood('food')"><h2>كبدة</h2></div>
+        <section class="food" id="food">
+            <button onclick="showFood('food')"></button>
+            <h2>البطاطس</h2>
+            <img src="https://kitchen.sayidaty.net/uploads/small/de/de298921167dc40210659f6aadf48ce8_w750_h750.jpg">
+            <ul>
+                <label>المكونات</label>
+                <li>البطاطس-</li>
+                <li>الكاتشب-</li>
+                <li>الطبق-</li>
+            </ul>
+            <ul>
+                <label>السعر</label>
+                <li>130 جنيه-</li>
+            </ul>
+        </section>
+    </section>
+    <section id="gallary" class="winds">
+        <section>
+            <img width="800" src="https://e7.pngegg.com/pngimages/550/933/png-clipart-grilled-meat-barbecue-grill-chophouse-restaurant-ribs-grilling-meat-grill-barbecue-food.png">
+            <img width="800" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5kJ--KCb7ua1iOwQNCfeul4uET79tWXAE4g&usqp=CAU">
+            <img width="800" src="">
+            <img width="800" src="">
+            <img width="800" src="">
+        </section>
+    </section>
+    <script>
+        function showFood(foodId) { 
+            const foodSection = document.getElementById(foodId);
+            if (foodSection) {
+                if (foodSection.style.display === "none") {
+                    // إذا كان العنصر مخفيًا، نظهره ونزيل الكلاس "hidden"
+                    foodSection.style.display = "block";
+                    foodSection.classList.remove("hidden");
+                } else {
+                    // إذا كان العنصر مرئيًا، نخفيه ونضيف الكلاس "hidden"
+                    foodSection.classList.add("hidden");
+                    foodSection.style.display = "none";
+                }
+            }
+        }
+    </script>
+    
+</body>
+</html>
